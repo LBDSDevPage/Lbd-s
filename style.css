@@ -14,8 +14,11 @@
   --white: #ffffff;
   --gray-light: #f5f5f5;
   --gray-mid: #e0e0e0;
+  --gray-dark: #d0d0d0;
   --gray-text: #555555;
   --gold: #f9dc5caa;
+  --gold-light: #fef4d4;
+  --accent: #efb710;
   --font-h: "Wix Madefor Display", sans-serif;
   --font-b: "Wix Madefor Text", sans-serif;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -35,7 +38,7 @@ html {
 }
 body {
   padding: 10px;
-  padding-top: 80px; /* Espacio para el header fijo */
+  padding-top: 80px;
 }
 
 a {
@@ -74,7 +77,6 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* Efecto cuando se hace scroll */
 header.scrolled nav {
   background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--shadow-md);
@@ -212,7 +214,7 @@ nav h1:hover {
   background-image: url("./images/stile2.jpg");
 }
 .slide-2 {
-  background-image: url("./images/stile3.jpg");
+  background-image: url("./images");
 }
 .slide-3 {
   background-image: url("./images/stile4.jpg");
@@ -288,6 +290,143 @@ nav h1:hover {
   background: rgba(255, 255, 255, 0.95);
   width: 24px;
   border-radius: 10px;
+}
+
+/* ── AVISOS DE LOS RETIROS (MEJORADO) ── */
+#retiro {
+  background: linear-gradient(
+    135deg,
+    var(--gray-mid) 0%,
+    var(--gray-light) 100%
+  );
+  border-radius: 24px;
+  padding: 40px;
+  margin-top: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-dark);
+  transition: all 0.3s ease;
+}
+
+#retiro:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.tbu,
+.cf {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  background: var(--white);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.tbu:hover,
+.cf:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.tbu {
+  margin-bottom: 24px;
+}
+
+#retiro img {
+  flex: 1;
+  border-radius: 16px;
+  height: auto;
+  width: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+#retiro img:hover {
+  box-shadow: var(--shadow-md);
+  transform: scale(1.02);
+}
+
+.info-ret {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-ret h3 {
+  font-family: var(--font-h);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.info-ret h3::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.info-ret h4 {
+  font-family: var(--font-b);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.info-ret button,
+.btn-abonos {
+  font-family: var(--font-h);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  display: inline-block;
+}
+
+.info-ret button:hover,
+.btn-abonos:hover {
+  background: var(--accent);
+  color: var(--black);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.info-ret button:active,
+.btn-abonos:active {
+  transform: translateY(0);
+}
+
+.info-ret iframe {
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  border: 2px solid var(--gray-mid);
+  margin-top: 8px;
+}
+
+.info-ret iframe:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
 }
 
 /* ── VISIÓN Y MISIÓN (MEJORADO) ── */
@@ -433,116 +572,16 @@ nav h1:hover {
   transform: scaleX(1);
 }
 
-iframe {
+.contacto iframe {
   border-radius: 20px;
   box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
   border: 2px solid var(--white);
 }
 
-iframe:hover {
+.contacto iframe:hover {
   box-shadow: var(--shadow-lg);
   transform: scale(1.02);
-}
-
-/* ── AUDIOS PAGE ── */
-.audios-page {
-  background: var(--white);
-  padding: 60px 40px;
-  min-height: calc(100vh - 180px);
-}
-
-.audios-search {
-  max-width: 900px;
-  margin: 0 auto 24px;
-  text-align: center;
-}
-
-.audios-search h1 {
-  font-family: var(--font-h);
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.audios-search p {
-  color: var(--gray-text);
-  margin-bottom: 16px;
-}
-
-.audios-controls {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 8px;
-}
-
-.audios-controls input[type="search"] {
-  width: 260px;
-  max-width: 100%;
-  border: 1px solid var(--gray-mid);
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.audios-controls input[type="search"]:focus {
-  outline: none;
-  border-color: var(--black);
-  box-shadow: var(--shadow-sm);
-}
-
-.audios-controls button {
-  border: 1px solid var(--black);
-  background: var(--white);
-  color: var(--black);
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-family: var(--font-h);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.audios-controls button:hover {
-  background: var(--black);
-  color: var(--white);
-  box-shadow: var(--shadow-sm);
-  transform: translateY(-2px);
-}
-
-.audio-list {
-  display: grid;
-  gap: 14px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.audio-item {
-  border: 1px solid var(--gray-mid);
-  padding: 14px;
-  border-radius: 10px;
-  background: #fbfbfb;
-  display: grid;
-  gap: 8px;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
-}
-
-.audio-item:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-  background: var(--white);
-}
-
-.audio-item h3 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.audio-item audio {
-  width: 100%;
 }
 
 /* ── FOOTER (MEJORADO) ── */
@@ -587,31 +626,6 @@ footer a:hover::after {
   display: none !important;
 }
 
-.media-preview {
-  margin: 20px auto 24px;
-  max-width: 1000px;
-  background: #fff;
-  border: 1px solid var(--gray-mid);
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: var(--shadow-sm);
-}
-
-.media-preview h3 {
-  margin: 0 0 10px;
-}
-
-.media-preview iframe,
-.media-preview video,
-.media-preview audio {
-  width: 100%;
-  max-width: 100%;
-}
-
-.media-preview button {
-  margin-top: 12px;
-}
-
 /* ── RESPONSIVE: 768px ── */
 @media (max-width: 768px) {
   body {
@@ -635,22 +649,42 @@ footer a:hover::after {
     flex-direction: column;
   }
 
-  .audios-page {
-    padding: 28px 16px;
+  /* Retiros responsive tablet */
+  #retiro {
+    padding: 32px 24px;
   }
 
-  .audios-controls {
-    justify-content: space-between;
+  .tbu,
+  .cf {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
   }
 
-  .audios-controls input[type="search"] {
-    flex: 1;
+  #retiro img {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .info-ret {
+    width: 100%;
+  }
+
+  .info-ret iframe {
+    width: 100%;
+    height: 280px;
+  }
+
+  .contacto iframe {
+    width: 100%;
+    height: 320px;
   }
 }
 
 /* ── RESPONSIVE: 480px ── */
 @media (max-width: 480px) {
   body {
+    padding: 5px;
     padding-top: 72px;
   }
 
@@ -704,6 +738,46 @@ footer a:hover::after {
     bottom: 12px;
   }
 
+  /* Retiros responsive móvil */
+  #retiro {
+    padding: 20px 16px;
+    margin-top: 20px;
+  }
+
+  .tbu,
+  .cf {
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  #retiro img {
+    width: 100%;
+    max-height: 220px;
+    border-radius: 12px;
+  }
+
+  .info-ret h3 {
+    font-size: 18px;
+  }
+
+  .info-ret h4 {
+    font-size: 14px;
+  }
+
+  .info-ret button,
+  .btn-abonos {
+    font-size: 13px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .info-ret iframe {
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+  }
+
   .vm-col {
     padding: 24px 20px;
   }
@@ -716,7 +790,7 @@ footer a:hover::after {
     padding: 24px;
   }
 
-  iframe {
+  .contacto iframe {
     width: 100%;
     height: 280px;
   }
@@ -724,5 +798,29 @@ footer a:hover::after {
   footer {
     padding: 16px 20px;
     font-size: 11px;
+  }
+}
+
+/* ── RESPONSIVE: 360px (extra pequeño) ── */
+@media (max-width: 360px) {
+  #retiro {
+    padding: 16px 12px;
+  }
+
+  .tbu,
+  .cf {
+    padding: 16px 12px;
+  }
+
+  .info-ret h3 {
+    font-size: 16px;
+  }
+
+  .info-ret h4 {
+    font-size: 13px;
+  }
+
+  .info-ret iframe {
+    height: 200px;
   }
 }
