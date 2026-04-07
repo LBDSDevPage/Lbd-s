@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Iglesia La Biblia Dice de Suba — Suba, Bogotá, Colombia. Haciendo discípulos en Colombia y las naciones del mundo."
+    />
+    <link rel="icon" href="./images/Favicon Logo LBD Suba.png" type="png" />
+    <title>Inicio | ilbd-s</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&family=Wix+Madefor+Text:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ── ENCABEZADO Y NAVEGACIÓN ── -->
+    <header>
+      <nav aria-label="Navegación principal">
+        <a href="./index.html" aria-label="Ir al inicio">
+          <img
+            src="./images/Logo La Biblia dice Suba color negro.png"
+            alt="Logo Iglesia La Biblia Dice Suba"
+            class="nav-logo"
+          />
+        </a>
+        <h1>La Biblia Dice - Suba</h1>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ── HERO / SLIDER ── -->
+      <section class="hero" aria-label="Banner principal">
+        <div
+          class="hero-slide slide-1 active"
+          role="img"
+          aria-label="Imagen del banner 1"
+        ></div>
+        <div
+          class="hero-slide slide-2"
+          role="img"
+          aria-label="Imagen del banner 2"
+        ></div>
+        <div
+          class="hero-slide slide-3"
+          role="img"
+          aria-label="Imagen del banner 3"
+        ></div>
+        <button class="hero-arrow left" id="prev" aria-label="Imagen anterior">
+          &#8249;
+        </button>
+        <button
+          class="hero-arrow right"
+          id="next"
+          aria-label="Imagen siguiente"
+        >
+          &#8250;
+        </button>
+        <div
+          class="hero-dots"
+          role="tablist"
+          aria-label="Indicadores del slider"
+        >
+          <button
+            class="hero-dot active"
+            data-i="0"
+            role="tab"
+            aria-selected="true"
+            aria-label="Ir a imagen 1"
+          ></button>
+          <button
+            class="hero-dot"
+            data-i="1"
+            role="tab"
+            aria-selected="false"
+            aria-label="Ir a imagen 2"
+          ></button>
+          <button
+            class="hero-dot"
+            data-i="2"
+            role="tab"
+            aria-selected="false"
+            aria-label="Ir a imagen 3"
+          ></button>
+        </div>
+      </section>
+
+      <br />
+
+      <!-- ── VISIÓN Y MISIÓN ── -->
+      <section class="vm" aria-labelledby="vision-heading">
+        <article class="vm-col">
+          <h2 class="vm-heading" id="vision-heading">Nuestra visión</h2>
+          <p class="vm-text">
+            Establecer iglesias modelo en las 32 capitales (ciudades
+            principales) formando una base misionera con el fin de hacer
+            discípulos de Cristo en Colombia y las naciones del mundo.
+          </p>
+        </article>
+        <article class="vm-col">
+          <h2 class="vm-heading">Nuestra Misión</h2>
+          <p class="vm-text">
+            Existimos para glorificar a Dios siendo una fábrica de obreros para
+            Colombia para Cristo, al perfeccionar a los santos y fieles, para
+            comisionar a los obreros a las naciones del mundo, y movilizarnos
+            para la multiplicación del reino de Dios.
+          </p>
+        </article>
+      </section>
+
+      <!-- ── CONTACTO ── -->
+      <section class="contacto" aria-labelledby="contacto-heading">
+        <div>
+          <h2 class="contacto-title" id="contacto-heading">Contáctanos</h2>
+          <address class="contacto-inner">
+            <p>Servicios dominicales: 10:00am</p>
+            <p>Calle 141 # 101b-45, Suba, Bogotá</p>
+            <p><a href="tel:+573107832515">(+57) 310 7832515</a></p>
+          </address>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2080.0612111270693!2d-74.09560854405247!3d4.74293417636543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85bfed148779%3A0xbc90e13d232562c7!2sLa%20Biblia%20Dice%20de%20Suba!5e0!3m2!1ses!2sco!4v1775523216866!5m2!1ses!2sco"
+          width="400"
+          height="320"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+
+    <!-- ── PIE DE PÁGINA ── -->
+    <footer>
+      <small
+        >COPYRIGHT © 2007 - 2024
+        <a href="https://www.ilbd.org">www.ilbd.org</a></small
+      >
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
