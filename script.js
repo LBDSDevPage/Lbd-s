@@ -20,5 +20,5 @@ if (slides.length && dots.length) {
     ?.addEventListener("click", () => goTo(cur - 1));
   dots.forEach((d) => d.addEventListener("click", () => goTo(+d.dataset.i)));
 
-  setInterval(() => goTo(cur + 1), 10000);
+  setInterval(() => goTo(cur + 1), 15000);
 }
