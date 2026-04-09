@@ -584,6 +584,104 @@ nav h1:hover {
   transform: scale(1.02);
 }
 
+/* ── INFO RETIROS (MEJORADO) ── */
+#RetiroTBUInfo {
+  background: var(--white);
+  padding: 40px;
+  margin-top: 32px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-mid);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  transition: box-shadow 0.3s ease;
+}
+
+#RetiroTBUInfo:hover {
+  box-shadow: var(--shadow-md);
+}
+
+#RetiroTBUInfo h2 {
+  font-family: var(--font-h);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+  text-align: center;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#RetiroTBUInfo h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+#planPagos {
+  background: var(--gray-light);
+  padding: 24px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#planPagos:hover {
+  box-shadow: var(--shadow-md);
+}
+
+#planPagos img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+#planPagos img:hover {
+  box-shadow: var(--shadow-md);
+  transform: scale(1.01);
+}
+
+#planPagos p,
+#planPagos h3,
+#planPagos h4 {
+  text-align: center;
+  width: 100%;
+}
+
+#planPagos h3 {
+  font-family: var(--font-h);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 8px;
+}
+
+#planPagos h4 {
+  font-family: var(--font-b);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
 /* ── FOOTER (MEJORADO) ── */
 footer {
   background: var(--white);
@@ -678,6 +776,16 @@ footer a:hover::after {
   .contacto iframe {
     width: 100%;
     height: 320px;
+  }
+
+  /* Info Retiros responsive tablet */
+  #RetiroTBUInfo {
+    padding: 32px 24px;
+  }
+
+  #planPagos {
+    padding: 20px;
+    max-width: 100%;
   }
 }
 
@@ -799,6 +907,29 @@ footer a:hover::after {
     padding: 16px 20px;
     font-size: 11px;
   }
+
+  /* Info Retiros responsive móvil */
+  #RetiroTBUInfo {
+    padding: 24px 16px;
+    margin-top: 20px;
+  }
+
+  #RetiroTBUInfo h2 {
+    font-size: 20px;
+  }
+
+  #planPagos {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  #planPagos h3 {
+    font-size: 16px;
+  }
+
+  #planPagos h4 {
+    font-size: 14px;
+  }
 }
 
 /* ── RESPONSIVE: 360px (extra pequeño) ── */
@@ -822,5 +953,22 @@ footer a:hover::after {
 
   .info-ret iframe {
     height: 200px;
+  }
+
+  /* Info Retiros responsive extra pequeño */
+  #RetiroTBUInfo {
+    padding: 20px 12px;
+  }
+
+  #planPagos {
+    padding: 12px;
+  }
+
+  #planPagos h3 {
+    font-size: 15px;
+  }
+
+  #planPagos h4 {
+    font-size: 13px;
   }
 }
