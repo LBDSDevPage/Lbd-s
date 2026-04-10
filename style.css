@@ -38,7 +38,7 @@ html {
 }
 body {
   padding: 10px;
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 a {
@@ -66,15 +66,22 @@ nav {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--gold);
-  border-radius: 16px;
-  box-shadow: var(--shadow-gl);
-  height: 60px;
+  border: 2px solid var(--gray-mid);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  height: 90px;
   padding: 0 40px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
   transition: all 0.3s ease;
+}
+
+nav:hover {
+  box-shadow: var(--shadow-gl);
+  border-color: var(--gold);
+  transform: translateY(-2px);
 }
 
 header.scrolled nav {
@@ -85,9 +92,11 @@ header.scrolled nav {
 
 .nav-logo {
   height: 50px;
+  margin-left: 30px;
   transition:
     transform 0.3s ease,
     filter 0.3s ease;
+  justify-self: start;
 }
 
 .nav-logo:hover {
@@ -97,14 +106,22 @@ header.scrolled nav {
 
 nav h1 {
   font-family: var(--font-h);
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: 24px;
+  text-align: center;
+  justify-self: center;
+  line-height: 1;
   transition: opacity 0.3s ease;
 }
 
 nav h1:hover {
   opacity: 0.7;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: end;
 }
 
 .nav-links.open {
@@ -192,7 +209,8 @@ nav h1:hover {
 }
 
 .hero:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-gl);
+  border-color: var(--gold);
   transform: translateY(-4px);
 }
 
@@ -500,7 +518,9 @@ nav h1:hover {
 }
 
 .contacto:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-gl);
+  border-color: var(--gold);
+  transform: translateY(-2px);
 }
 
 .contacto-title {
@@ -727,11 +747,28 @@ footer a:hover::after {
 /* ── RESPONSIVE: 768px ── */
 @media (max-width: 768px) {
   body {
-    padding-top: 76px;
+    padding-top: 90px;
   }
 
   header {
     top: 10px;
+  }
+
+  nav {
+    grid-template-columns: auto 1fr;
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  nav h1 {
+    font-size: 18px;
+    grid-column: 1 / -1;
+    margin-top: 8px;
+  }
+
+  .nav-logo {
+    margin-left: 10px;
+    height: 40px;
   }
 
   .vm {
@@ -793,7 +830,7 @@ footer a:hover::after {
 @media (max-width: 480px) {
   body {
     padding: 5px;
-    padding-top: 72px;
+    padding-top: 85px;
   }
 
   header {
@@ -804,16 +841,21 @@ footer a:hover::after {
   nav {
     height: auto;
     min-height: 56px;
-    padding: 0 16px;
+    padding: 10px 16px;
     border-radius: 12px;
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .nav-logo {
-    height: 40px;
+    height: 35px;
+    justify-self: center;
+    margin-left: 0;
   }
 
   nav h1 {
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 0;
   }
 
   .hero {
@@ -934,6 +976,10 @@ footer a:hover::after {
 
 /* ── RESPONSIVE: 360px (extra pequeño) ── */
 @media (max-width: 360px) {
+  nav h1 {
+    font-size: 14px;
+  }
+
   #retiro {
     padding: 16px 12px;
   }
