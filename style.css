@@ -237,6 +237,9 @@ nav h1:hover {
 .slide-3 {
   background-image: url("./images/stile4.jpg");
 }
+.slide-4 {
+  background-image: url("./images/stile5.jpg");
+}
 
 .hero-arrow {
   position: absolute;
